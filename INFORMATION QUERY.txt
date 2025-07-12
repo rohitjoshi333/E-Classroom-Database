@@ -1,0 +1,50 @@
+Information Queries
+
+
+
+Question no.1 List the programs that are available in the college and the total number of students enrolled in each.
+
+SELECT p.Program_Name,
+count(s.Student_ID) as Students from Program p
+left join Student s ON p.Program_ID = s.Program_ID
+group by p.Program_Name;
+
+
+
+Question no.2 List all the announcements made for a particular module starting from 1st May 2024 to 28th May 2024.
+
+SELECT a.Announcement_Title, a.Content,
+a.AnnounceDate from Announcement a
+Join Announce_Teach_Mod_Stud ats ON a.Announcement_ID = ats.Announcement_ID
+Where a.AnnounceDate 
+Between TO_DATE('2024-05-01', 'YYYY-MM-DD') and TO_DATE('2024-05-28', 'YYYY-MM-DD')
+order by a.AnnounceDate;
+
+
+
+Question no.3 List the names of all modules that begin with the letter 'D', along with the total number of resources uploaded for those modules.
+
+
+SELECT m.Module_Name,
+count(r.Resource_ID) as Resource_Count from Module m
+Left Join Reso_Mod_Stud r ON m.Module_ID = r.Module_ID
+Where m.Module_Name LIKE 'D%'
+group by m.Module_Name;
+
+
+
+Question no.4 List the names of all students along with their enrolled program who have not submitted any assessments for a particular module.
+
+SELECT s.Name AS StudentName, p.Program_Name From Student s
+Join Program p ON s.Program_ID = p.Program_ID Where Exists ( Select 1 FROM Assess_Mod_Stud ams
+Join Module m on ams.Module_ID = m.Module_ID Where ams.Student_ID = s.Student_ID
+And ams.Submission_Status = 'Not Submitted' And m.Module_Name = 'VFX Design');
+
+
+
+Question no.5 List all the teachers who teach more than one module.
+
+SELECT t.Teacher_ID, t.Teacher_Name
+From Teacher t
+Join Teach_Mod_Stud tms ON t.Teacher_ID = tms.Teacher_ID
+Group by t.Teacher_ID, t.Teacher_Name having COUNT(DISTINCT tms.Module_ID) > 1;

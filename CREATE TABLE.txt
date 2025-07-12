@@ -1,0 +1,132 @@
+Table Creation & Description
+
+
+CREATE TABLE Program (
+Program_ID VARCHAR(15) PRIMARY KEY,
+Program_Name VARCHAR(25) NOT NULL,
+Duration VARCHAR(10) NOT NULL,
+Description VARCHAR(60) NOT NULL);
+
+DESC Program;
+
+
+CREATE TABLE Student (
+Student_ID VARCHAR(15) PRIMARY KEY,
+Name VARCHAR(20) NOT NULL,
+Address VARCHAR(20) NOT NULL,
+Contact VARCHAR(15) NOT NULL,
+Email VARCHAR(30) UNIQUE,
+JoinedDate DATE NOT NULL,
+Program_ID VARCHAR(15) NOT NULL,
+FOREIGN KEY (Program_ID) REFERENCES Program(Program_ID));
+
+DESC Student;
+
+
+CREATE TABLE Module (
+Module_ID VARCHAR(15) PRIMARY KEY,
+Module_Name VARCHAR(40) NOT NULL,
+Credit_Hours NUMBER(5) NOT NULL);
+
+DESC Module;
+
+
+CREATE TABLE Mod_Stud (
+Module_ID VARCHAR(15) NOT NULL,
+Student_ID VARCHAR(15) NOT NULL,
+PRIMARY KEY (Module_ID, Student_ID),
+FOREIGN KEY (Module_ID) REFERENCES Module(Module_ID),
+FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID));
+
+DESC Mod_Stud;
+
+
+CREATE TABLE Teacher (
+Teacher_ID VARCHAR(15) PRIMARY KEY,
+Teacher_Name VARCHAR(20) NOT NULL,
+Teacher_Email VARCHAR(40) UNIQUE,
+Specialization VARCHAR(40) NOT NULL);
+
+DESC Teacher;
+
+
+CREATE TABLE Teach_Mod_Stud (
+Teacher_ID VARCHAR(15) NOT NULL,
+Module_ID VARCHAR(15) NOT NULL,
+Student_ID VARCHAR(15) NOT NULL,
+PRIMARY KEY (Teacher_ID, Student_ID, Module_ID),
+FOREIGN KEY (Teacher_ID) REFERENCES Teacher(Teacher_ID),
+FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID),
+FOREIGN KEY (Module_ID) REFERENCES Module(Module_ID));
+
+DESC Teach_Mod_Stud;
+
+
+CREATE TABLE Announcement (
+Announcement_ID VARCHAR(20) PRIMARY KEY,
+Announcement_Title VARCHAR(30) NOT NULL,
+Content VARCHAR(50) NOT NULL,
+AnnounceDate DATE NOT NULL);
+
+DESC Announcement;
+
+
+CREATE TABLE Announce_Teach_Mod_Stud (
+Announcement_ID VARCHAR(20),
+Teacher_ID VARCHAR(15) NOT NULL,
+Student_ID VARCHAR(15) NOT NULL,
+Module_ID VARCHAR(15) NOT NULL,
+PRIMARY KEY (Announcement_ID, Teacher_ID, Student_ID, Module_ID),
+FOREIGN KEY (Announcement_ID) REFERENCES Announcement(Announcement_ID),
+FOREIGN KEY (Teacher_ID) REFERENCES Teacher(Teacher_ID),
+FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID),
+FOREIGN KEY (Module_ID) REFERENCES Module(Module_ID));
+
+DESC Announce_Teach_Mod_Stud;
+
+
+CREATE TABLE Assessment (
+Assessment_ID VARCHAR(15) PRIMARY KEY,
+Assessment_Title VARCHAR(15) NOT NULL,
+Deadline DATE NOT NULL,
+Weightage NUMBER(10) NOT NULL);
+
+DESC Assessment;
+
+
+CREATE TABLE Assess_Mod_Stud (
+Assessment_ID VARCHAR(15) NOT NULL,
+Module_ID VARCHAR(15) NOT NULL,
+Student_ID VARCHAR(15) NOT NULL,
+Submission_Status VARCHAR(20) NOT NULL,
+Marks_Obtained NUMBER(20) NOT NULL,
+Grade VARCHAR(5) NOT NULL,
+PRIMARY KEY (Assessment_ID, Student_ID, Module_ID),
+FOREIGN KEY (Assessment_ID) REFERENCES Assessment(Assessment_ID),
+FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID),
+FOREIGN KEY (Module_ID) REFERENCES Module(Module_ID));
+
+DESC Assess_Mod_Stud;
+
+
+CREATE TABLE Resources (
+Resource_ID VARCHAR(15) PRIMARY KEY,
+Resource_Name VARCHAR(40) NOT NULL,
+Resource_Type VARCHAR(15) NOT NULL,
+R_Duration VARCHAR(10));
+
+DESC Resources;
+
+
+CREATE TABLE Reso_Mod_Stud (
+Resource_ID VARCHAR(15) NOT NULL,
+Module_ID VARCHAR(15) NOT NULL,
+Student_ID VARCHAR(15) NOT NULL,
+ResourceStatus VARCHAR(20) NOT NULL,
+PRIMARY KEY (Resource_ID, Student_ID, Module_ID),
+FOREIGN KEY (Resource_ID) REFERENCES Resources(Resource_ID),
+FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID),
+FOREIGN KEY (Module_ID) REFERENCES Module(Module_ID));
+
+DESC Reso_Mod_Stud;
+

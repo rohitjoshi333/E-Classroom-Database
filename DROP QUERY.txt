@@ -1,0 +1,38 @@
+
+Drop table Reso_Mod_Stud;
+
+Drop table Resources;
+
+Drop table Announce_Teach_Mod_Stud;
+
+Drop table Announcement;
+
+Drop table Assess_Mod_Stud;
+
+Drop table Assessment;
+
+Drop table Teach_Mod_Stud;
+
+Drop table Teacher;
+
+Drop table Mod_Stud;
+
+Drop table Module;
+
+Drop table Student;
+
+Drop table Program;
+
+
+
+
+
+
+
+
+
+
+
+
+
+

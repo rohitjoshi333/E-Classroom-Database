@@ -1,0 +1,56 @@
+Transaction Queries
+
+
+Question no.1 Identify the module that has the latest assessment deadline.
+
+SELECT ams.Module_ID, m.Module_Name, a.Deadline
+From Module m
+Join Assess_Mod_Stud ams ON m.Module_ID = ams.Module_ID
+Join Assessment a ON ams.Assessment_ID = a.Assessment_ID
+Where a.Deadline = (SELECT max(a1.Deadline) from Assessment a1);
+
+
+Question no.2 Find the top three students who have the highest total score across all modules.
+
+SELECT Student_ID, Student_Name, Total_Score
+From (SELECT s.Student_ID, s.Name AS Student_Name,
+sum(ams.Marks_Obtained) AS Total_Score
+From Student s
+Join Assess_Mod_Stud ams ON s.Student_ID = ams.Student_ID
+group by s.Student_ID, s.Name 
+Order by Total_Score DESC) WHERE ROWNUM <= 3;
+
+
+Question no.3 Find the total number of assessments for each program and the average score across all assessments in those programs.
+
+SELECT p.Program_Name,
+Count(a.Assessment_ID) AS TotalAssessments, AVG(ams.Marks_Obtained) AS AverageMarks
+From Program p
+Join Student s ON p.Program_ID = s.Program_ID
+Join Assess_Mod_Stud ams ON s.Student_ID = ams.Student_ID
+Join Assessment a ON ams.Assessment_ID = a.Assessment_ID GROUP BY p.Program_Name;
+
+
+Question no.4 List the students who have scored above the average score in the ‘Databases’ module.
+
+SELECT s.Name AS StudentName, ams.Marks_Obtained
+From Student s
+Join Assess_Mod_Stud ams ON s.Student_ID = ams.Student_ID
+Join Module m ON ams.Module_ID = m.Module_ID
+Where m.Module_Name = 'DataBase' AND 
+ams.Marks_Obtained > (SELECT AVG(ams1.Marks_Obtained)
+From Assess_Mod_Stud ams1
+Join Module m1 ON ams1.Module_ID = m1.Module_ID
+Where m1.Module_Name = 'DataBase');
+
+
+Question no.5 Display whether a student has passed or failed as remarks as per their total aggregate marks obtained in a particular module. (NOTE: Consider total aggregate marks equal to or above 40 is pass, below 40 is fail)
+
+SELECT s.Name as Student_Name, m.Module_Name AS Module_Name,
+case when SUM(ams.Marks_Obtained) >= 40 then 'Pass'
+Else 'Fail' END as Remarks from Student s
+Join Assess_Mod_Stud ams on s.Student_ID = ams.Student_ID
+Join Module m ON ams.Module_ID = m.Module_ID
+Where m.Module_Name = 'DataBase' Group by s.Name, m.Module_Name;
+
+

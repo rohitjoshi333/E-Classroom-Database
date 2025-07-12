@@ -1,0 +1,392 @@
+INSERT QUERY:
+
+
+INSERT INTO Program (Program_ID, Program_Name, Duration, Description) 
+VALUES ('P101', 'Multimedia', '3 Years', 'VFX, Video Editing');
+
+INSERT INTO Program (Program_ID, Program_Name, Duration, Description) 
+VALUES ('P102', 'Computing', '4 Years', 'Software Development, IT systems');
+
+INSERT INTO Program (Program_ID, Program_Name, Duration, Description) 
+VALUES ('P103', 'BBA', '3 Years', 'Management, Finance, Marketing');
+
+INSERT INTO Program (Program_ID, Program_Name, Duration, Description) 
+VALUES ('P104', 'Computing With AI', '2 Years', 'Artificial Intelligence, Machine Learning');
+
+INSERT INTO Program (Program_ID, Program_Name, Duration, Description) 
+VALUES ('P105', 'Computer Engineering', '4 Years', 'Hardware Design, Programming, Systems Integration');
+
+INSERT INTO Program (Program_ID, Program_Name, Duration, Description) 
+VALUES ('P106', 'Networking', '3 Years', 'Network Design, Infrastructure Management');
+
+INSERT INTO Program (Program_ID, Program_Name, Duration, Description) 
+VALUES ('P107', 'Information Technology', '5 Years', 'Software Development, Project Management');
+
+
+
+
+INSERT INTO Student (Student_ID, Name, Address, Contact, Email, JoinedDate, Program_ID) 
+VALUES ('NP012001', 'Manan Chataut', 'Mahendranagar', 9812345678, 'manan_chataut1@gmail.com', TO_DATE('2024-01-15', 'YYYY-MM-DD'), 'P101');
+
+INSERT INTO Student (Student_ID, Name, Address, Contact, Email, JoinedDate, Program_ID) 
+VALUES ('NP012002', 'Anil Joshi', 'Nepalgunj', 9889012375, 'anil_joshi45@gmail.com', TO_DATE('2024-04-10', 'YYYY-MM-DD'), 'P106');
+
+INSERT INTO Student (Student_ID, Name, Address, Contact, Email, JoinedDate, Program_ID) 
+VALUES ('NP012003', 'Aditya Bhatta', 'Butwal', 9823456789, 'aditya_bhatta12@gmail.com', TO_DATE('2024-07-20', 'YYYY-MM-DD'), 'P102');
+
+INSERT INTO Student (Student_ID, Name, Address, Contact, Email, JoinedDate, Program_ID) 
+VALUES ('NP012004', 'Aryan Bhandari', 'Lalitpur', 9856789012, 'aryan_bhandari911@gmail.com', TO_DATE('2024-11-15', 'YYYY-MM-DD'), 'P102');
+
+INSERT INTO Student (Student_ID, Name, Address, Contact, Email, JoinedDate, Program_ID) 
+VALUES ('NP012005', 'Bhuwan Bhatta', 'Dhangadi', 9834567890, 'bhuwan_bhatta123@gmail.com', TO_DATE('2024-05-10', 'YYYY-MM-DD'), 'P103');
+
+INSERT INTO Student (Student_ID, Name, Address, Contact, Email, JoinedDate, Program_ID) 
+VALUES ('NP012006', 'Sakshyam Kafley', 'Butwal', 9889012385, 'sakshyam_kafley78@gmail.com', TO_DATE('2024-05-07', 'YYYY-MM-DD'), 'P103');
+
+INSERT INTO Student (Student_ID, Name, Address, Contact, Email, JoinedDate, Program_ID) 
+VALUES ('NP012007', 'Pranay Shakya', 'Chitwan', 9889012345, 'pranay_shakya15@gmail.com', TO_DATE('2024-06-10', 'YYYY-MM-DD'), 'P107');
+
+INSERT INTO Student (Student_ID, Name, Address, Contact, Email, JoinedDate, Program_ID) 
+VALUES ('NP012008', 'Aakar Singh', 'Kathmandu', 9845678901, 'aakar_singh911@gmail.com', TO_DATE('2024-03-25', 'YYYY-MM-DD'), 'P104');
+
+INSERT INTO Student (Student_ID, Name, Address, Contact, Email, JoinedDate, Program_ID) 
+VALUES ('NP012009', 'Shrine Ghimire', 'Chitwan', 9889012365, 'shrine_ghimire23@gmail.com', TO_DATE('2024-03-20', 'YYYY-MM-DD'), 'P105');
+
+INSERT INTO Student (Student_ID, Name, Address, Contact, Email, JoinedDate, Program_ID) 
+VALUES ('NP012010', 'Najib Thapa', 'Bhaktapur', 9867890123, 'najib_thapa101@gmail.com', TO_DATE('2024-08-05', 'YYYY-MM-DD'), 'P106');
+
+
+
+
+
+INSERT INTO Module (Module_ID, Module_Name, Credit_Hours) 
+VALUES ('MOD301', 'VFX Design', 13);
+
+INSERT INTO Module (Module_ID, Module_Name, Credit_Hours) 
+VALUES ('MOD302', 'Video Editing Techniques', 15);
+
+INSERT INTO Module (Module_ID, Module_Name, Credit_Hours) 
+VALUES ('MOD303', 'DataBase', 20);
+
+INSERT INTO Module (Module_ID, Module_Name, Credit_Hours) 
+VALUES ('MOD304', 'Marketing Essentials', 10);
+
+INSERT INTO Module (Module_ID, Module_Name, Credit_Hours) 
+VALUES ('MOD305', 'Artificial Intelligence Fundamentals', 10);
+
+INSERT INTO Module (Module_ID, Module_Name, Credit_Hours) 
+VALUES ('MOD306', 'Digital Electronics', 10);
+
+INSERT INTO Module (Module_ID, Module_Name, Credit_Hours) 
+VALUES ('MOD307', 'Cyber Security Fundamentals', 18);
+
+INSERT INTO Module (Module_ID, Module_Name, Credit_Hours) 
+VALUES ('MOD308', 'IT Systems and Architecture', 15);
+
+
+
+
+
+INSERT INTO Mod_Stud (Module_ID, Student_ID) 
+VALUES ('MOD301', 'NP012001');
+
+INSERT INTO Mod_Stud (Module_ID, Student_ID) 
+VALUES ('MOD302', 'NP012001');
+
+INSERT INTO Mod_Stud (Module_ID, Student_ID) 
+VALUES ('MOD307', 'NP012002');
+
+INSERT INTO Mod_Stud (Module_ID, Student_ID) 
+VALUES ('MOD303', 'NP012003');
+
+INSERT INTO Mod_Stud (Module_ID, Student_ID) 
+VALUES ('MOD303', 'NP012004');
+
+INSERT INTO Mod_Stud (Module_ID, Student_ID) 
+VALUES ('MOD304', 'NP012005');
+
+INSERT INTO Mod_Stud (Module_ID, Student_ID) 
+VALUES ('MOD304', 'NP012006');
+
+INSERT INTO Mod_Stud (Module_ID, Student_ID) 
+VALUES ('MOD308', 'NP012007');
+
+INSERT INTO Mod_Stud (Module_ID, Student_ID) 
+VALUES ('MOD305', 'NP012008');
+
+INSERT INTO Mod_Stud (Module_ID, Student_ID) 
+VALUES ('MOD306', 'NP012009');
+
+INSERT INTO Mod_Stud (Module_ID, Student_ID) 
+VALUES ('MOD307', 'NP012010');
+
+
+
+
+
+INSERT INTO Teacher (Teacher_ID, Teacher_Name, Teacher_Email, Specialization) 
+VALUES ('T401', 'Sujan Sakya', 'Sujan_sakya401@gmail.com', 'VFX Design');
+
+INSERT INTO Teacher (Teacher_ID, Teacher_Name, Teacher_Email, Specialization) 
+VALUES ('T402', 'Jivan Pandey', 'jivan_pandey402@gmail.com', 'Video Editing Techniques');
+
+INSERT INTO Teacher (Teacher_ID, Teacher_Name, Teacher_Email, Specialization) 
+VALUES ('T403', 'Bijay Gautam', 'bijay_gautam403@gmail.com', 'DataBase');
+
+INSERT INTO Teacher (Teacher_ID, Teacher_Name, Teacher_Email, Specialization) 
+VALUES ('T404', 'Shresha Bhandari', 'shresha_bhandari404@gmail.com', 'Marketing Essentials');
+
+INSERT INTO Teacher (Teacher_ID, Teacher_Name, Teacher_Email, Specialization) 
+VALUES ('T405', 'Prashun Ayer', 'prashun_ayer405@gmail.com', 'Artificial Intelligence Fundamentals');
+
+INSERT INTO Teacher (Teacher_ID, Teacher_Name, Teacher_Email, Specialization) 
+VALUES ('T406', 'Bishnu Pandey', 'bishnu_pandey405@gmail.com', 'Digital Electronics');
+
+INSERT INTO Teacher (Teacher_ID, Teacher_Name, Teacher_Email, Specialization) 
+VALUES ('T407', 'Ujal Bhatta', 'ujal_bhatta406@gmail.com', 'Cyber Security Fundamentals');
+
+INSERT INTO Teacher (Teacher_ID, Teacher_Name, Teacher_Email, Specialization) 
+VALUES ('T408', 'Dipeshor Silwal', 'dipeshor_silwal407@gmail.com', 'IT Systems and Architecture');
+
+INSERT INTO Teacher (Teacher_ID, Teacher_Name, Teacher_Email, Specialization) 
+VALUES ('T409', 'Tejaswi Joshi', 'Tejaswi_Joshi407@gmail.com', 'DataBase');
+
+
+
+
+
+INSERT INTO Teach_Mod_Stud (Teacher_ID, Module_ID, Student_ID) 
+VALUES ('T401', 'MOD301', 'NP012001');
+
+INSERT INTO Teach_Mod_Stud (Teacher_ID, Module_ID, Student_ID) 
+VALUES ('T401', 'MOD302', 'NP012001');
+
+INSERT INTO Teach_Mod_Stud (Teacher_ID, Module_ID, Student_ID) 
+VALUES ('T402', 'MOD302', 'NP012001');
+
+INSERT INTO Teach_Mod_Stud (Teacher_ID, Module_ID, Student_ID) 
+VALUES ('T403', 'MOD303', 'NP012003');
+
+INSERT INTO Teach_Mod_Stud (Teacher_ID, Module_ID, Student_ID) 
+VALUES ('T404', 'MOD304', 'NP012005');
+
+INSERT INTO Teach_Mod_Stud (Teacher_ID, Module_ID, Student_ID) 
+VALUES ('T405', 'MOD305', 'NP012008');
+
+INSERT INTO Teach_Mod_Stud (Teacher_ID, Module_ID, Student_ID) 
+VALUES ('T406', 'MOD306', 'NP012009');
+
+INSERT INTO Teach_Mod_Stud (Teacher_ID, Module_ID, Student_ID) 
+VALUES ('T407', 'MOD307', 'NP012010');
+
+INSERT INTO Teach_Mod_Stud (Teacher_ID, Module_ID, Student_ID) 
+VALUES ('T408', 'MOD308', 'NP012007’);
+
+INSERT INTO Teach_Mod_Stud (Teacher_ID, Module_ID, Student_ID) 
+VALUES ('T409', 'MOD303', 'NP012003');
+
+
+
+
+
+INSERT INTO Announcement (Announcement_ID, Announcement_Title, Content, AnnounceDate) 
+VALUES ('AN701', 'VFX Workshop', 'VFX Design techniques, applications', TO_DATE('2024-05-05', 'YYYY-MM-DD'));
+
+INSERT INTO Announcement (Announcement_ID, Announcement_Title, Content, AnnounceDate) 
+VALUES ('AN702', 'Video Editing Session', 'Training for video editing ', TO_DATE('2024-05-28', 'YYYY-MM-DD'));
+
+INSERT INTO Announcement (Announcement_ID, Announcement_Title, Content, AnnounceDate) 
+VALUES ('AN703', 'Marketing Seminar', 'Essential Marketing strategies', TO_DATE('2024-10-10', 'YYYY-MM-DD'));
+
+INSERT INTO Announcement (Announcement_ID, Announcement_Title, Content, AnnounceDate) 
+VALUES ('AN704', 'Database WorkShop', 'Learn Concepts Of Oracle', TO_DATE('2024-09-21', 'YYYY-MM-DD'));
+
+INSERT INTO Announcement (Announcement_ID, Announcement_Title, Content, AnnounceDate) 
+VALUES ('AN705', 'AI Fundamentals Class', 'AI and its fundamentals', TO_DATE('2024-05-20', 'YYYY-MM-DD'));
+
+INSERT INTO Announcement (Announcement_ID, Announcement_Title, Content, AnnounceDate) 
+VALUES ('AN706', 'Digital Electronics Workshop', 'Digital electronics, circuit design', TO_DATE('2024-06-30', 'YYYY-MM-DD'));
+
+INSERT INTO Announcement (Announcement_ID, Announcement_Title, Content, AnnounceDate) 
+VALUES ('AN707', 'Cyber Security Discussion', 'Fundamentals of cyber security', TO_DATE('2024-07-25', 'YYYY-MM-DD'));
+
+INSERT INTO Announcement (Announcement_ID, Announcement_Title, Content, AnnounceDate) 
+VALUES ('AN708', 'IT Systems and Architecture', 'Training for IT systems Week1', TO_DATE('2024-05-15', 'YYYY-MM-DD'));
+
+INSERT INTO Announcement (Announcement_ID, Announcement_Title, Content, AnnounceDate) 
+VALUES ('AN709', 'IT Systems and Architecture', 'Training for IT Architecture Week2', TO_DATE('2024-01-25', 'YYYY-MM-DD'));
+
+
+
+
+
+INSERT INTO Announce_Teach_Mod_Stud (Announcement_ID, Teacher_ID, Module_ID, Student_ID) 
+VALUES ('AN701', 'T401', 'MOD301', 'NP012001');
+
+INSERT INTO Announce_Teach_Mod_Stud (Announcement_ID, Teacher_ID, Module_ID, Student_ID) 
+VALUES ('AN702', 'T402', 'MOD302', 'NP012001');
+
+INSERT INTO Announce_Teach_Mod_Stud (Announcement_ID, Teacher_ID, Module_ID, Student_ID) 
+VALUES ('AN703', 'T403', 'MOD303', 'NP012003');
+
+INSERT INTO Announce_Teach_Mod_Stud (Announcement_ID, Teacher_ID, Module_ID, Student_ID) 
+VALUES ('AN704', 'T404', 'MOD304', 'NP012005');
+
+INSERT INTO Announce_Teach_Mod_Stud (Announcement_ID, Teacher_ID, Module_ID, Student_ID) 
+VALUES ('AN705', 'T405', 'MOD305', 'NP012008');
+
+INSERT INTO Announce_Teach_Mod_Stud (Announcement_ID, Teacher_ID, Module_ID, Student_ID) 
+VALUES ('AN706', 'T406', 'MOD306', 'NP012009');
+
+INSERT INTO Announce_Teach_Mod_Stud (Announcement_ID, Teacher_ID, Module_ID, Student_ID) 
+VALUES ('AN707', 'T407', 'MOD307', 'NP012010');
+
+INSERT INTO Announce_Teach_Mod_Stud (Announcement_ID, Teacher_ID, Module_ID, Student_ID) 
+VALUES ('AN708', 'T408', 'MOD308', 'NP012007');
+
+INSERT INTO Announce_Teach_Mod_Stud (Announcement_ID, Teacher_ID, Module_ID, Student_ID) 
+VALUES ('AN709', 'T408', 'MOD308', 'NP012007');
+
+
+
+
+
+INSERT INTO Assessment (Assessment_ID, Assessment_Title, Deadline, Weightage) 
+VALUES ('ASS901', 'Class Test', TO_DATE('2024-02-10', 'YYYY-MM-DD'), 20);
+
+INSERT INTO Assessment (Assessment_ID, Assessment_Title, Deadline, Weightage) 
+VALUES ('ASS902', 'Practical Exam', TO_DATE('2024-05-25', 'YYYY-MM-DD'), 60);
+
+INSERT INTO Assessment (Assessment_ID, Assessment_Title, Deadline, Weightage) 
+VALUES ('ASS903', 'Project', TO_DATE('2024-04-15', 'YYYY-MM-DD'), 50);
+
+INSERT INTO Assessment (Assessment_ID, Assessment_Title, Deadline, Weightage) 
+VALUES ('ASS904', 'Quiz', TO_DATE('2024-03-10', 'YYYY-MM-DD'), 10);
+
+INSERT INTO Assessment (Assessment_ID, Assessment_Title, Deadline, Weightage) 
+VALUES ('ASS905', 'Assignment', TO_DATE('2024-03-05', 'YYYY-MM-DD'), 30);
+
+INSERT INTO Assessment (Assessment_ID, Assessment_Title, Deadline, Weightage) 
+VALUES ('ASS906', 'Practical Exam', TO_DATE('2024-04-20', 'YYYY-MM-DD'), 40);
+
+INSERT INTO Assessment (Assessment_ID, Assessment_Title, Deadline, Weightage) 
+VALUES ('ASS907', 'Mid-Term Exam', TO_DATE('2024-06-10', 'YYYY-MM-DD'), 70);
+
+INSERT INTO Assessment (Assessment_ID, Assessment_Title, Deadline, Weightage) 
+VALUES ('ASS908', 'Final Exam', TO_DATE('2024-07-25', 'YYYY-MM-DD'), 80);
+
+INSERT INTO Assessment (Assessment_ID, Assessment_Title, Deadline, Weightage) 
+VALUES ('ASS909', 'Written Test', TO_DATE('2024-05-20', 'YYYY-MM-DD'), 40);
+
+INSERT INTO Assessment (Assessment_ID, Assessment_Title, Deadline, Weightage) 
+VALUES ('ASS910', 'Practical Test', TO_DATE('2024-02-20', 'YYYY-MM-DD'), 40);
+
+INSERT INTO Assessment (Assessment_ID, Assessment_Title, Deadline, Weightage) 
+VALUES ('ASS911', 'Written Test', TO_DATE('2024-02-25', 'YYYY-MM-DD'), 40);
+
+
+
+
+
+INSERT INTO Assess_Mod_Stud (Assessment_ID, Module_ID, Student_ID, Submission_Status, Marks_Obtained, Grade) 
+VALUES ('ASS901', 'MOD301', 'NP012001', 'Not Submitted', 0, 'N/A');
+
+INSERT INTO Assess_Mod_Stud (Assessment_ID, Module_ID, Student_ID, Submission_Status, Marks_Obtained, Grade) 
+VALUES ('ASS902', 'MOD307', 'NP012002', 'Submitted', 91, 'A');
+
+INSERT INTO Assess_Mod_Stud (Assessment_ID, Module_ID, Student_ID, Submission_Status, Marks_Obtained, Grade) 
+VALUES ('ASS903', 'MOD303', 'NP012003', 'Not Submitted', 0, 'N/A');
+
+INSERT INTO Assess_Mod_Stud (Assessment_ID, Module_ID, Student_ID, Submission_Status, Marks_Obtained, Grade) 
+VALUES ('ASS904', 'MOD303', 'NP012004', 'Submitted', 65, 'B');
+
+INSERT INTO Assess_Mod_Stud (Assessment_ID, Module_ID, Student_ID, Submission_Status, Marks_Obtained, Grade)
+VALUES ('ASS905', 'MOD304', 'NP012006', 'Submitted', 80, 'A');
+
+INSERT INTO Assess_Mod_Stud (Assessment_ID, Module_ID, Student_ID, Submission_Status, Marks_Obtained, Grade)
+VALUES ('ASS906', 'MOD308', 'NP012007', 'Submitted', 59, 'C');
+
+INSERT INTO Assess_Mod_Stud (Assessment_ID, Module_ID, Student_ID, Submission_Status, Marks_Obtained, Grade) 
+VALUES ('ASS907', 'MOD305', 'NP012008', 'Submitted', 39, 'E');
+
+INSERT INTO Assess_Mod_Stud (Assessment_ID, Module_ID, Student_ID, Submission_Status, Marks_Obtained, Grade) 
+VALUES ('ASS908', 'MOD306', 'NP012009', 'Submitted', 89, 'A');
+
+INSERT INTO Assess_Mod_Stud (Assessment_ID, Module_ID, Student_ID, Submission_Status, Marks_Obtained, Grade) 
+VALUES ('ASS909', 'MOD302', 'NP012001', 'Submitted', 70, 'A');
+
+INSERT INTO Assess_Mod_Stud (Assessment_ID, Module_ID, Student_ID, Submission_Status, Marks_Obtained, Grade) 
+VALUES ('ASS910', 'MOD301', 'NP012010', 'Submitted', 70, 'A');
+
+INSERT INTO Assess_Mod_Stud (Assessment_ID, Module_ID, Student_ID, Submission_Status, Marks_Obtained, Grade) 
+VALUES ('ASS911', 'MOD301', 'NP012005', 'Not Submitted', 0, 'N/A');
+
+
+
+
+
+INSERT INTO Resources (Resource_ID, Resource_Name, Resource_Type, R_Duration) 
+VALUES ('R1001', 'VFX Design Guide', 'PDF', '3 Months');
+
+INSERT INTO Resources (Resource_ID, Resource_Name, Resource_Type, R_Duration) 
+VALUES ('R1002', 'Video Editing Tools', 'Video', '1 Month');
+
+INSERT INTO Resources (Resource_ID, Resource_Name, Resource_Type, R_Duration) 
+VALUES ('R1003', 'Programming Basics', 'E-Book', '2 Months');
+
+INSERT INTO Resources (Resource_ID, Resource_Name, Resource_Type, R_Duration) 
+VALUES ('R1004', 'Marketing, Accounts Essentials', 'Excel Sheet', '1 Month');
+
+INSERT INTO Resources (Resource_ID, Resource_Name, Resource_Type, R_Duration) 
+VALUES ('R1005', 'AI Fundamentals Resources', 'Video', '2 Months');
+
+INSERT INTO Resources (Resource_ID, Resource_Name, Resource_Type, R_Duration) 
+VALUES ('R1006', 'Digital Electronics E-Book', 'E-Book', '4 Months');
+
+INSERT INTO Resources (Resource_ID, Resource_Name, Resource_Type, R_Duration) 
+VALUES ('R1007', 'Cyber Security Guide', 'PDF', '6 Months');
+
+INSERT INTO Resources (Resource_ID, Resource_Name, Resource_Type, R_Duration) 
+VALUES ('R1008', 'IT Systems, Architecture Book', 'Book', '1 Month');
+
+
+
+
+
+INSERT INTO Reso_Mod_Stud (Resource_ID, Student_ID, Module_ID, ResourceStatus) 
+VALUES ('R1001', 'NP012001', 'MOD301', 'Completed');
+
+INSERT INTO Reso_Mod_Stud (Resource_ID, Student_ID, Module_ID, ResourceStatus) 
+VALUES ('R1002', 'NP012001', 'MOD302', 'In Progress');
+
+INSERT INTO Reso_Mod_Stud (Resource_ID, Student_ID, Module_ID, ResourceStatus) 
+VALUES ('R1007', 'NP012002', 'MOD307', 'Pending');
+
+INSERT INTO Reso_Mod_Stud (Resource_ID, Student_ID, Module_ID, ResourceStatus) 
+VALUES ('R1003', 'NP012003', 'MOD303', 'Pending');
+
+INSERT INTO Reso_Mod_Stud (Resource_ID, Student_ID, Module_ID, ResourceStatus) 
+VALUES ('R1003', 'NP012004', 'MOD303', 'Pending');
+
+INSERT INTO Reso_Mod_Stud (Resource_ID, Student_ID, Module_ID, ResourceStatus) 
+VALUES ('R1004', 'NP012005', 'MOD304', 'Completed');
+
+INSERT INTO Reso_Mod_Stud (Resource_ID, Student_ID, Module_ID, ResourceStatus) 
+VALUES ('R1004', 'NP012006', 'MOD304', 'Completed');
+
+INSERT INTO Reso_Mod_Stud (Resource_ID, Student_ID, Module_ID, ResourceStatus) 
+VALUES ('R1008', 'NP012007', 'MOD308', 'In Progress');
+
+INSERT INTO Reso_Mod_Stud (Resource_ID, Student_ID, Module_ID, ResourceStatus) 
+VALUES ('R1005', 'NP012008', 'MOD305', 'In Progress');
+
+INSERT INTO Reso_Mod_Stud (Resource_ID, Student_ID, Module_ID, ResourceStatus) 
+VALUES ('R1006', 'NP012009', 'MOD306', 'Completed');
+
+INSERT INTO Reso_Mod_Stud (Resource_ID, Student_ID, Module_ID, ResourceStatus) 
+VALUES ('R1007', 'NP012010', 'MOD307', 'Pending');
+
+
+
+
+
