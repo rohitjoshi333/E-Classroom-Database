@@ -10,8 +10,7 @@ A fully normalized Oracle-based database system for managing online classrooms. 
 |------------------------------|-------------------------------------------------------|
 | `classroom_dump.dmp`         | Oracle dump file with full schema and sample data     |
 | `queries_answers.txt`        | Questions & answers based on SQL queries              |
-| `queries.sql`                | Executable SQL queries for testing                    |
-| `E-Classroom_Project_Report.pdf` | Final project report covering design, ERD, normalization, etc. |
+| `Final_Report.pdf` | Final project report covering design, ERD, normalization, etc. |
 
 ---
 
